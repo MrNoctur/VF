@@ -1,0 +1,92 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Eleganza Profunda</ion-title>
+    <ion-buttons slot="end">
+      <ion-button
+        (click)="presentLogoutAlert()"
+        shape="round"
+        color="danger"
+        class="logout-button"
+        ion-ripple-effect
+      >
+        <ion-icon name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="page-content">
+    <img src="assets/fondo.avif" alt="Home-fondo" class="home-image" />
+  </div>
+  
+  <!-- Grid de tarjetas de productos -->
+  <div class="image-grid">
+    <!-- Tarjeta de producto Tom Ford -->
+    <ion-card *ngFor="let item of items">
+      <img [src]="item.image" [alt]="item.name"/>
+      <ion-card-content>
+        <ion-card-title>{{ item.name }}</ion-card-title>
+        <p>{{ item.price }}</p>
+        <ion-button fill="clear" (click)="toggleFavorite(item)">
+          <ion-icon [name]="isFavorite(item.name) ? 'heart' : 'heart-outline'"></ion-icon>
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Tarjeta de producto You -->
+    <ion-card *ngFor="let item of items">
+      <img [src]="item.image" [alt]="item.name" />
+      <ion-card-content>
+        <ion-card-title>{{ item.name }}</ion-card-title>
+        <p>{{ item.price }}</p>
+        <ion-button fill="clear" (click)="toggleFavorite(item)">
+          <ion-icon [name]="isFavorite(item.name) ? 'heart' : 'heart-outline'"></ion-icon>
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Tarjeta de producto Hugo Boss -->
+    <ion-card *ngFor="let item of items">
+      <img [src]="item.image" [alt]="item.name" />
+      <ion-card-content>
+        <ion-card-title>{{ item.name }}</ion-card-title>
+        <p>{{ item.price }}</p>
+        <ion-button fill="clear" (click)="toggleFavorite(item)">
+          <ion-icon [name]="isFavorite(item.name)? 'heart' : 'heart-outline'"></ion-icon>
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Tarjeta de producto Rayo McQueen -->
+    <ion-card *ngFor="let item of items">
+      <img [src]="item.image" [alt]="item.name"/>
+      <ion-card-content>
+        <ion-card-title>{{ item.name }}</ion-card-title>
+        <p>{{ item.price }}</p>
+        <ion-button fill="clear" (click)="toggleFavorite(item)">
+          <ion-icon [name]="isFavorite(item.name) ? 'heart' : 'heart-outline'"></ion-icon>
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="navigateToProfile()" expand="block">
+        <ion-icon name="person-circle-outline"></ion-icon>
+        Perfil
+      </ion-button>
+      <ion-button (click)="navigateToPerfumes()" expand="block">
+        <ion-icon name="heart-outline"></ion-icon>
+        Perfumes Fav
+      </ion-button>
+      <ion-button (click)="navigateToCart()" expand="block">
+        <ion-icon name="cart-outline"></ion-icon>
+        Carrito
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

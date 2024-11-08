@@ -1,0 +1,34 @@
+ ion-item {
+    margin: 8px 0;
+  }
+  
+  form {
+    width: 100%;
+    max-width: 400px; /* Ajusta el ancho máximo según tus necesidades */
+  }
+  
+.page-background {
+    background-image: url('/Perfumeria/EP/src/assets/fondo.avif'); /* Asegúrate de que la ruta sea correcta */
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  
+  .page-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 16px;
+    margin-top: 5%; /* Ajusta este valor para mover el formulario hacia abajo */
+  }
+  
+  ion-content {
+    --background: #000000; /* Fondo negro */
+  }

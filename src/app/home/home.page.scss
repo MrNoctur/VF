@@ -1,0 +1,70 @@
+.logout-button {
+  --border-radius: 50%;
+  --width: 50px;
+  --height: 50px;
+  --padding: 0;
+  --background: #ff3d00;
+  --color: #fff; 
+  --ripple-color: rgba(255, 255, 255, 0.4); 
+
+  ion-icon {
+    font-size: 24px; 
+  }
+}
+
+ion-footer {
+  --background: #000000; 
+}
+
+.footer-buttons {
+  display: flex;
+  justify-content: center; 
+  gap: 50px; 
+}
+
+ion-button {
+  --border-radius: 100%;
+
+}
+
+.home-image {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.image-grid {
+  display: grid;
+  margin-top: 100px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.TF {
+  width: 100%;
+  height: auto; // Mantiene la proporción de la imagen
+  border-radius: 8px; // Opcional: agrega bordes redondeados a las imágenes
+  object-fit: cover; // Asegura que la imagen cubra el contenedor sin distorsionarse
+}
+
+.page-content {
+  position: relative;
+}
+
+
+.centered-buttons {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+ion-footer ion-button {
+  flex: 1; /* Para que los botones ocupen espacio de manera uniforme */
+  max-width: 140px; /* Opcional: Define un ancho máximo para que no se estiren demasiado */
+}

@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Perfil de Usuario</ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="navigateToHome()">
+        <ion-icon name="arrow-back-outline"></ion-icon> Volver
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div *ngIf="userData">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Datos del Usuario</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p><strong>Email:</strong> {{ userData.email }}</p>
+        <p><strong>Usuario:</strong> {{ userData.username }}</p>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+
