@@ -68,3 +68,29 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Angular dependencies
+/node_modules/@angular/cdk
+/node_modules/@angular/material
+/node_modules/@angular/flex-layout
+/node_modules/@angular/animations
+/node_modules/@angular/forms
+/node_modules/@angular/router
+/node_modules/@angular/platform-browser
+/node_modules/@angular/platform-browser-dynamic
+/node_modules/@angular/common
+/node_modules/@angular/compiler
+/node_modules/@angular/core
+/node_modules/@angular/http
+/node_modules/@angular/service-worker
+/node_modules/@angular/elements
+/node_modules/@angular/localize
+/node_modules/@angular/platform-server
+/node_modules/@angular/platform-webworker
+/node_modules/@angular/platform-webworker-dynamic
+/node_modules/@angular/upgrade
+/node_modules/@angular/language-service
+/node_modules/@angular-devkit/build-angular
+/node_modules/@angular-devkit/core
+/node_modules/@angular-devkit/schematics
+/node_modules/@angular/cli
