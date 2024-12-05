@@ -8,6 +8,12 @@ const routes: Routes = [
   { path: 'registro', loadChildren: () => import('./registro/registro.module').then(m => m.RegistroPageModule) },
   { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomePageModule) },
   { path: 'perfil',loadChildren: () => import('./perfil/perfil.module').then( m => m.PerfilPageModule)},
+  { path: 'perfumefav',loadChildren: () => import('./perfumefav/perfumefav.module').then( m => m.PerfumefavPageModule)
+  },
+  {
+    path: 'carrito',
+    loadChildren: () => import('./carrito/carrito.module').then( m => m.CarritoPageModule)
+  },
 ];
 
 @NgModule({

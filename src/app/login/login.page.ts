@@ -5,6 +5,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth, database} from 'src/environments/environment';
 import { ref, get} from 'firebase/database';
+import { StorageService } from '../services/storage.service';
 
 @Component({
   selector: 'app-login',
@@ -18,7 +19,8 @@ export class LoginPage {
     private fb: FormBuilder,
     private router: Router,
     private loadingController: LoadingController,
-    private alertController: AlertController
+    private alertController: AlertController,
+    private storageService: StorageService
   ) {
     this.loginForm = this.fb.group({
       identifier: ['', [Validators.required, Validators.email]],
@@ -76,6 +78,12 @@ export class LoginPage {
             uid: user.uid,
             email: user.email,
           }));
+
+
+          await this.storageService.setCurrentUser({
+            email: user.email,
+            uid: user.uid,
+          });
 
           await loading.dismiss();
           this.router.navigate(['/home']);

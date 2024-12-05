@@ -10,6 +10,6 @@ export class UserProfileService {
 
   // Método para obtener los datos del perfil del usuario
   getUserProfile(userId: string): Observable<any> {
-    return this.db.object(`/users/${userId}`).valueChanges(); // Ruta 'users/{userId}' en tu base de datos
+    return this.db.object(`/users/${userId}`).valueChanges();
   }
 }

@@ -1,0 +1,30 @@
+ion-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-items {
+  width: 100%;
+  max-width: 600px; /* Ajusta el tamaño máximo según el diseño que quieras */
+  margin: 0 auto; /* Centra los elementos */
+}
+
+.cart-total {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+.empty-cart {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #888;
+}
+
+ion-button {
+  margin-top: 20px;
+}

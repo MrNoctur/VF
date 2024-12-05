@@ -22,50 +22,17 @@
   
   <!-- Grid de tarjetas de productos -->
   <div class="image-grid">
-    <!-- Tarjeta de producto Tom Ford -->
     <ion-card *ngFor="let item of items">
-      <img [src]="item.image" [alt]="item.name"/>
-      <ion-card-content>
+      <img [src]="item.image" />
+      <ion-card-header>
         <ion-card-title>{{ item.name }}</ion-card-title>
-        <p>{{ item.price }}</p>
-        <ion-button fill="clear" (click)="toggleFavorite(item)">
-          <ion-icon [name]="isFavorite(item.name) ? 'heart' : 'heart-outline'"></ion-icon>
-        </ion-button>
-      </ion-card-content>
-    </ion-card>
-
-    <!-- Tarjeta de producto You -->
-    <ion-card *ngFor="let item of items">
-      <img [src]="item.image" [alt]="item.name" />
+        <ion-card-subtitle>{{ item.price }}</ion-card-subtitle>
+      </ion-card-header>
       <ion-card-content>
-        <ion-card-title>{{ item.name }}</ion-card-title>
-        <p>{{ item.price }}</p>
-        <ion-button fill="clear" (click)="toggleFavorite(item)">
-          <ion-icon [name]="isFavorite(item.name) ? 'heart' : 'heart-outline'"></ion-icon>
-        </ion-button>
-      </ion-card-content>
-    </ion-card>
-
-    <!-- Tarjeta de producto Hugo Boss -->
-    <ion-card *ngFor="let item of items">
-      <img [src]="item.image" [alt]="item.name" />
-      <ion-card-content>
-        <ion-card-title>{{ item.name }}</ion-card-title>
-        <p>{{ item.price }}</p>
-        <ion-button fill="clear" (click)="toggleFavorite(item)">
-          <ion-icon [name]="isFavorite(item.name)? 'heart' : 'heart-outline'"></ion-icon>
-        </ion-button>
-      </ion-card-content>
-    </ion-card>
-
-    <!-- Tarjeta de producto Rayo McQueen -->
-    <ion-card *ngFor="let item of items">
-      <img [src]="item.image" [alt]="item.name"/>
-      <ion-card-content>
-        <ion-card-title>{{ item.name }}</ion-card-title>
-        <p>{{ item.price }}</p>
-        <ion-button fill="clear" (click)="toggleFavorite(item)">
-          <ion-icon [name]="isFavorite(item.name) ? 'heart' : 'heart-outline'"></ion-icon>
+        <ion-button (click)="addToCart(item)" expand="full" color="primary">Añadir al Carrito</ion-button>
+        <!-- Botón para agregar a favoritos -->
+        <ion-button (click)="addToFavorites(item)" expand="full" color="secondary">
+          <ion-icon name="heart" slot="start"></ion-icon>Agregar a Favoritos
         </ion-button>
       </ion-card-content>
     </ion-card>

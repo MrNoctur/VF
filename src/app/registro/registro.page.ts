@@ -41,7 +41,7 @@ export class RegistroPage {
       });
 
       await this.presentAlert('Éxito', 'Registro exitoso');
-      this.router.navigate(['/home']);
+      this.router.navigate(['/login']);
     } catch (error:any) {
       console.error('Error al registrar usuario', error.message);
       await this.presentAlert('Error', 'Error al registrar usuario.');

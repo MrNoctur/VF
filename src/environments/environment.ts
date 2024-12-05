@@ -13,9 +13,10 @@ export const environment = {
     apiKey: "AIzaSyB3y9WlsFlp-ZblkdGgTtsJoMCVK0YLbHU",
     authDomain: "vfpm-59084.firebaseapp.com",
     projectId: "vfpm-59084",
-    storageBucket: "vfpm-59084.firebasestorage.app",
+    storageBucket: "vfpm-59084.appspot.com",
     messagingSenderId: "679221039226",
-    appId: "1:679221039226:web:33518edee5e3d739e82bc3"
+    appId: "1:679221039226:web:33518edee5e3d739e82bc3",
+    databaseURL: "https://vfpm-59084-default-rtdb.firebaseio.com"
   }
   
 };
