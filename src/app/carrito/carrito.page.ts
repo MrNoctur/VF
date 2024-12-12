@@ -4,7 +4,6 @@ import { Producto } from '../models/item-carrito.model';
 import { AlertController } from '@ionic/angular';
 import { Router } from '@angular/router';
 
-
 @Component({
   selector: 'app-carrito',
   templateUrl: './carrito.page.html',
@@ -13,16 +12,19 @@ import { Router } from '@angular/router';
 export class CarritoPage implements OnInit {
   carrito: Producto[] = [];
   total: number = 0;
+  envio: number = 10; // Costo de envío fijo (puedes ajustarlo según la lógica que desees)
+  isLoading: boolean = false; // Variable para controlar el estado de carga
 
-  constructor(private carritoService: CarritoService, 
-              private alertController: AlertController,
-              private router: Router
+  constructor(
+    private carritoService: CarritoService,
+    private alertController: AlertController,
+    private router: Router
   ) {}
 
   ngOnInit() {
     this.carrito = this.carritoService.getProductos();
     this.carritoService.carritoTotal$.subscribe(total => {
-      this.total = total;
+      this.total = total; // Actualiza el total del carrito
     });
   }
 
@@ -30,7 +32,6 @@ export class CarritoPage implements OnInit {
     this.carritoService.removerProducto(id); // Asegúrate de que estás pasando el id
     this.carrito = this.carritoService.getProductos(); // Actualiza el carrito después de eliminar
   }
-
 
   async procederAlPago() {
     if (this.carrito.length === 0) {
@@ -43,19 +44,33 @@ export class CarritoPage implements OnInit {
       return;
     }
 
-    const alert = await this.alertController.create({
-      header: 'Gracias por tu compra',
-      message: 'Gracias por comprar en Eleganza Profonda.',
-      buttons: ['OK']
-    });
-    await alert.present();
+    // Simulación de carga mientras se procesa la compra
+    this.isLoading = true;
 
-    this.router.navigate(['/home']);
+    // Simulamos un pequeño retraso para la compra
+    setTimeout(async () => {
+      this.isLoading = false; // Ocultamos el spinner después de la "compra"
+
+      // Simulación de pago exitoso
+      const alert = await this.alertController.create({
+        header: 'Compra Exitosa',
+        message: 'Gracias por tu compra. Te hemos enviado un recibo a tu correo.',
+        buttons: ['OK']
+      });
+      await alert.present();
+
+      // Redirigir al usuario a la página de inicio
+      this.router.navigate(['/home']);
+    }, 2000); // Simulamos un retraso de 2 segundos para la compra
   }
 
   incrementarCantidad(producto: Producto): void {
-    producto.quantity++;
-    this.carritoService.actualizarProducto(producto);
+    if (producto.quantity < producto.stock) {
+      producto.quantity++;
+      this.carritoService.actualizarProducto(producto);
+    } else {
+      alert("No hay suficiente stock para este producto.");
+    }
   }
 
   decrementarCantidad(producto: Producto): void {

@@ -24,46 +24,46 @@ export class HomePage implements OnInit{
     { id: '8', name: 'Versace Eros', price: 95000, image: 'assets/versace_eros.jpg' },
     { id: '9', name: 'Gucci Guilty', price: 115000, image: 'assets/gucci_guilty.jpg' },
     { id: '10', name: 'Calvin Klein Euphoria', price: 90000, image: 'assets/ck_euphoria.jpg' },
-      { id: '11', name: 'Paco Rabanne 1 Million', price: 125000, image: 'assets/paco_rabanne_1million.jpg' },
-      { id: '12', name: 'Yves Saint Laurent Black Opium', price: 140000, image: 'assets/ysl_black_opium.jpg' },
-      { id: '13', name: 'Jean Paul Gaultier Le Male', price: 110000, image: 'assets/jpg_le_male.jpg' },
-      { id: '14', name: 'Chloe Nomade', price: 135000, image: 'assets/chloe_nomade.jpg' },
-      { id: '15', name: 'Hermès Terre d’Hermès', price: 145000, image: 'assets/hermes_terre.jpg' },
-      { id: '16', name: 'Tom Ford Black Orchid', price: 155000, image: 'assets/tf_black_orchid.jpg' },
-      { id: '17', name: 'Dolce & Gabbana Light Blue', price: 110000, image: 'assets/dg_light_blue.jpg' },
-      { id: '18', name: 'Viktor & Rolf Flowerbomb', price: 160000, image: 'assets/vr_flowerbomb.jpg' },
-      { id: '19', name: 'Bvlgari Man in Black', price: 125000, image: 'assets/bvlgari_man_in_black.jpg' },
-      { id: '20', name: 'Aventus by Creed', price: 200000, image: 'assets/creed_aventus.jpg' },
-      { id: '21', name: 'Jean Paul Gaultier Scandal', price: 130000, image: 'assets/jpg_scandal.jpg' },
-      { id: '22', name: 'Lacoste Blanc', price: 95000, image: 'assets/lacoste_blanc.jpg' },
-      { id: '23', name: 'Abercrombie & Fitch Fierce', price: 105000, image: 'assets/abercrombie_fierce.jpg' },
-      { id: '24', name: 'Dior Homme', price: 145000, image: 'assets/dior_homme.jpg' },
-      { id: '25', name: 'Issey Miyake L’Eau d’Issey', price: 115000, image: 'assets/issey_miyake.jpg' },
-      { id: '26', name: 'Givenchy Gentlemen Only', price: 120000, image: 'assets/givenchy_gentlemen.jpg' },
-      { id: '27', name: 'Paco Rabanne Invictus', price: 100000, image: 'assets/paco_rabanne_invictus.jpg' },
-      { id: '28', name: 'Chanel Bleu de Chanel', price: 160000, image: 'assets/bleu_de_chanel.jpg' },
-      { id: '29', name: 'Prada Luna Rossa', price: 125000, image: 'assets/prada_luna_rossa.jpg' },
-      { id: '30', name: 'Azzaro Wanted', price: 115000, image: 'assets/azzaro_wanted.jpg' },
-      { id: '31', name: 'Tom Ford Oud Wood', price: 170000, image: 'assets/tf_oud_wood.jpg' },
-      { id: '32', name: 'Gucci Bloom', price: 135000, image: 'assets/gucci_bloom.jpg' },
-      { id: '33', name: 'Ralph Lauren Polo Black', price: 120000, image: 'assets/ralph_lauren_black.jpg' },
-      { id: '34', name: 'La Vie Est Belle by Lancôme', price: 150000, image: 'assets/lancôme_la_vie_est_belle.jpg' },
-      { id: '35', name: 'Tommy Hilfiger Tommy', price: 85000, image: 'assets/tommy_hilfiger_tommy.jpg' },
-      { id: '36', name: 'Mugler Alien', price: 140000, image: 'assets/mugler_alien.jpg' },
-      { id: '37', name: 'Carolina Herrera Good Girl', price: 125000, image: 'assets/ch_good_girl.jpg' },
-      { id: '38', name: 'Paco Rabanne Lady Million', price: 130000, image: 'assets/paco_rabanne_lady_million.jpg' },
-      { id: '39', name: 'Emporio Armani Stronger With You', price: 130000, image: 'assets/emporio_armani_stronger.jpg' },
-      { id: '40', name: 'Bvlgari Omnia Crystalline', price: 95000, image: 'assets/bvlgari_omnia_crystalline.jpg' },
-      { id: '41', name: 'Aerin Lauder Amber Musk', price: 170000, image: 'assets/aerin_lauder_amber_musk.jpg' },
-      { id: '42', name: 'Yves Saint Laurent Opium', price: 145000, image: 'assets/ysl_opium.jpg' },
-      { id: '43', name: 'Loewe 7', price: 140000, image: 'assets/loewe_7.jpg' },
-      { id: '44', name: 'Creed Silver Mountain Water', price: 180000, image: 'assets/creed_silver_mountain.jpg' },
-      { id: '45', name: 'Tom Ford Tobacco Vanille', price: 190000, image: 'assets/tf_tobacco_vanille.jpg' },
-      { id: '46', name: 'Byredo Black Saffron', price: 165000, image: 'assets/byredo_black_saffron.jpg' },
-      { id: '47', name: 'Le Labo Santal 33', price: 200000, image: 'assets/le_labo_santal_33.jpg' },
-      { id: '48', name: 'Maison Francis Kurkdjian Baccarat Rouge 540', price: 250000, image: 'assets/mfk_baccarat_rouge.jpg' },
-      { id: '49', name: 'Diptyque Philosykos', price: 140000, image: 'assets/diptyque_philosykos.jpg' },
-      { id: '50', name: 'Tom Ford Neroli Portofino', price: 180000, image: 'assets/tf_neroli_portofino.jpg' }
+    { id: '11', name: 'Paco Rabanne 1 Million', price: 125000, image: 'assets/paco_rabanne_1million.jpg' },
+    { id: '12', name: 'Yves Saint Laurent Black Opium', price: 140000, image: 'assets/ysl_black_opium.jpg' },
+    { id: '13', name: 'Jean Paul Gaultier Le Male', price: 110000, image: 'assets/jpg_le_male.jpg' },
+    { id: '14', name: 'Chloe Nomade', price: 135000, image: 'assets/chloe_nomade.jpg' },
+    { id: '15', name: 'Hermès Terre d’Hermès', price: 145000, image: 'assets/hermes_terre.jpg' },
+    { id: '16', name: 'Tom Ford Black Orchid', price: 155000, image: 'assets/tf_black_orchid.jpg' },
+    { id: '17', name: 'Dolce & Gabbana Light Blue', price: 110000, image: 'assets/dg_light_blue.jpg' },
+    { id: '18', name: 'Viktor & Rolf Flowerbomb', price: 160000, image: 'assets/vr_flowerbomb.jpg' },
+    { id: '19', name: 'Bvlgari Man in Black', price: 125000, image: 'assets/bvlgari_man_in_black.jpg' },
+    { id: '20', name: 'Aventus by Creed', price: 200000, image: 'assets/creed_aventus.jpg' },
+    { id: '21', name: 'Jean Paul Gaultier Scandal', price: 130000, image: 'assets/jpg_scandal.jpg' },
+    { id: '22', name: 'Lacoste Blanc', price: 95000, image: 'assets/lacoste_blanc.jpg' },
+    { id: '23', name: 'Abercrombie & Fitch Fierce', price: 105000, image: 'assets/abercrombie_fierce.jpg' },
+    { id: '24', name: 'Dior Homme', price: 145000, image: 'assets/dior_homme.jpg' },
+    { id: '25', name: 'Issey Miyake L’Eau d’Issey', price: 115000, image: 'assets/issey_miyake.jpg' },
+    { id: '26', name: 'Givenchy Gentlemen Only', price: 120000, image: 'assets/givenchy_gentlemen.jpg' },
+    { id: '27', name: 'Paco Rabanne Invictus', price: 100000, image: 'assets/paco_rabanne_invictus.jpg' },
+    { id: '28', name: 'Chanel Bleu de Chanel', price: 160000, image: 'assets/bleu_de_chanel.jpg' },
+    { id: '29', name: 'Prada Luna Rossa', price: 125000, image: 'assets/prada_luna_rossa.jpg' },
+    { id: '30', name: 'Azzaro Wanted', price: 115000, image: 'assets/azzaro_wanted.jpg' },
+    { id: '31', name: 'Tom Ford Oud Wood', price: 170000, image: 'assets/tf_oud_wood.jpg' },
+    { id: '32', name: 'Gucci Bloom', price: 135000, image: 'assets/gucci_bloom.jpg' },
+    { id: '33', name: 'Ralph Lauren Polo Black', price: 120000, image: 'assets/ralph_lauren_black.jpg' },
+    { id: '34', name: 'La Vie Est Belle by Lancôme', price: 150000, image: 'assets/lancôme_la_vie_est_belle.jpg' },
+    { id: '35', name: 'Tommy Hilfiger Tommy', price: 85000, image: 'assets/tommy_hilfiger_tommy.jpg' },
+    { id: '36', name: 'Mugler Alien', price: 140000, image: 'assets/mugler_alien.jpg' },
+    { id: '37', name: 'Carolina Herrera Good Girl', price: 125000, image: 'assets/ch_good_girl.jpg' },
+    { id: '38', name: 'Paco Rabanne Lady Million', price: 130000, image: 'assets/paco_rabanne_lady_million.jpg' },
+    { id: '39', name: 'Emporio Armani Stronger With You', price: 130000, image: 'assets/emporio_armani_stronger.jpg' },
+    { id: '40', name: 'Bvlgari Omnia Crystalline', price: 95000, image: 'assets/bvlgari_omnia_crystalline.jpg' },
+    { id: '41', name: 'Aerin Lauder Amber Musk', price: 170000, image: 'assets/aerin_lauder_amber_musk.jpg' },
+    { id: '42', name: 'Yves Saint Laurent Opium', price: 145000, image: 'assets/ysl_opium.jpg' },
+    { id: '43', name: 'Loewe 7', price: 140000, image: 'assets/loewe_7.jpg' },
+    { id: '44', name: 'Creed Silver Mountain Water', price: 180000, image: 'assets/creed_silver_mountain.jpg' },
+    { id: '45', name: 'Tom Ford Tobacco Vanille', price: 190000, image: 'assets/tf_tobacco_vanille.jpg' },
+    { id: '46', name: 'Byredo Black Saffron', price: 165000, image: 'assets/byredo_black_saffron.jpg' },
+    { id: '47', name: 'Le Labo Santal 33', price: 200000, image: 'assets/le_labo_santal_33.jpg' },
+    { id: '48', name: 'Maison Francis Kurkdjian Baccarat Rouge 540', price: 250000, image: 'assets/mfk_baccarat_rouge.jpg' },
+    { id: '49', name: 'Diptyque Philosykos', price: 140000, image: 'assets/diptyque_philosykos.jpg' },
+    { id: '50', name: 'Tom Ford Neroli Portofino', price: 180000, image: 'assets/tf_neroli_portofino.jpg' }
   ];
   favorites: any[] = [];
 
@@ -161,7 +161,9 @@ export class HomePage implements OnInit{
       name: item.name,
       price: item.price,
       image: item.image,
-      quantity: 1
+      quantity: 1,
+      descripcion: 'Default description', 
+      stock: 10
     };
     this.carritoService.addtoCart(producto);
     this.presentAddedToCartAlert(item.name);
@@ -177,8 +179,134 @@ export class HomePage implements OnInit{
   }
 
   async addToFavorites(perfume: any) {
-    await this.storageService.addFavorite(perfume);
+    const fullData = {
+      ...perfume,
+      ml: 100, // Valor predeterminado
+      tipo: 'Desconocido',
+      descripcion: 'Sin descripción',
+      valor: perfume.price,
+    };
+    await this.storageService.addFavorite(fullData);
     console.log(`${perfume.name} añadido a favoritos`);
 
   }
+
+  async addPerfume() {
+    const alert = await this.alertController.create({
+      header: 'Añadir Perfume',
+      inputs: [
+        { name: 'nombre', type: 'text', placeholder: 'Nombre del perfume' },
+        { 
+          name: 'precio', 
+          type: 'text', 
+          placeholder: 'Precio', 
+          attributes: {
+            inputmode: 'numeric',
+            pattern: '[0-9]*'
+          },
+          handler: (input) => {
+            input.value = `$${input.value.replace(/[^0-9]/g, '')}`;
+          }
+        },
+        { name: 'imagen', type: 'url', placeholder: 'URL de la imagen' },
+      ],
+      buttons: [
+        {
+          text: 'Cancelar',
+          role: 'cancel',
+        },
+        {
+          text: 'Guardar',
+          handler: async (data) => {
+            const newPerfume = {
+              id: (this.items.length + 1).toString(), // Genera un nuevo id basado en la longitud del array
+              name: data.nombre,
+              price: parseFloat(data.precio.replace('$', '')),
+              image: data.imagen,
+            };
+            this.items.push(newPerfume); // Agrega el nuevo perfume al array
+            await this.storageService.addFavorite(newPerfume);
+            this.favorites = await this.storageService.getFavorites(); // Actualiza la lista de favoritos
+          },
+        },
+      ],
+    });
+
+    await alert.present();
+  }
+
+
+  async editPerfume(item: any) {
+    const alert = await this.alertController.create({
+      header: 'Editar Perfume',
+      inputs: [
+        {
+          name: 'precio',
+          type: 'number',
+          placeholder: 'Precio',
+          value: item.precio,
+        },
+        {
+          name: 'imagen',
+          type: 'url',
+          placeholder: 'URL de la imagen',
+          value: item.imagen,
+        },
+      ],
+      buttons: [
+        {
+          text: 'Cancelar',
+          role: 'cancel',
+        },
+        {
+          text: 'Guardar',
+          handler: async (data) => {
+            await this.storageService.updateFavorite(item, data); // Actualiza la información del perfume
+            this.favorites = await this.storageService.getFavorites(); // Vuelve a obtener la lista de favoritos
+          },
+        },
+      ],
+    });
+
+    await alert.present();
+  }
+
+  async removePerfume(item: any) {
+    await this.storageService.removeFavorite(item);
+    this.favorites = await this.storageService.getFavorites(); // Actualiza la lista de favoritos después de eliminar el perfume
+  }
+
+  async presentDeleteConfirm(item: any) {
+    const alert = await this.alertController.create({
+      header: 'Eliminar Perfume',
+      message: `¿Estás seguro de que deseas eliminar el perfume "${item.name}"?`,
+      buttons: [
+        {
+          text: 'No',
+          role: 'cancel',
+          cssClass: 'secondary',
+          handler: () => {
+            console.log('Eliminación cancelada');
+          }
+        },
+        {
+          text: 'Sí',
+          handler: () => {
+            this.deletePerfume(item);
+          }
+        }
+      ]
+    });
+
+    await alert.present();
+  }
+
+  async deletePerfume(item: any) {
+    // Filtra el array eliminando el item con el id del perfume
+    this.items = this.items.filter(p => p.id !== item.id);
+
+
+    console.log('Perfume eliminado:', item);
+  }
+
 }

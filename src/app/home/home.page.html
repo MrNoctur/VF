@@ -19,21 +19,56 @@
   <div class="page-content">
     <img src="assets/fondo.avif" alt="Home-fondo" class="home-image" />
   </div>
-  
+
+  <!-- Botón para agregar un nuevo perfume -->
+  <ion-button expand="full" color="primary" (click)="addPerfume()">Añadir Perfume</ion-button>
+
   <!-- Grid de tarjetas de productos -->
   <div class="image-grid">
     <ion-card *ngFor="let item of items">
       <img [src]="item.image" />
       <ion-card-header>
         <ion-card-title>{{ item.name }}</ion-card-title>
-        <ion-card-subtitle>{{ item.price }}</ion-card-subtitle>
+        <ion-card-subtitle>{{ item.price | currency }}</ion-card-subtitle>
       </ion-card-header>
       <ion-card-content>
-        <ion-button (click)="addToCart(item)" expand="full" color="primary">Añadir al Carrito</ion-button>
-        <!-- Botón para agregar a favoritos -->
-        <ion-button (click)="addToFavorites(item)" expand="full" color="secondary">
-          <ion-icon name="heart" slot="start"></ion-icon>Agregar a Favoritos
-        </ion-button>
+        <div class="button-group">
+          <!-- Botón de Editar -->
+          <ion-button 
+            (click)="editPerfume(item)" 
+            size="small" 
+            color="tertiary" 
+            fill="outline">
+            <ion-icon name="create-outline"></ion-icon>
+          </ion-button>
+          
+          <!-- Botón para agregar a carrito -->
+          <ion-button 
+            (click)="addToCart(item)" 
+            size="small" 
+            color="primary" 
+            fill="outline">
+            <ion-icon name="cart-outline"></ion-icon>
+          </ion-button>
+          
+          <!-- Botón para agregar a favoritos -->
+          <ion-button 
+            (click)="addToFavorites(item)" 
+            size="small" 
+            color="secondary" 
+            fill="outline">
+            <ion-icon name="heart-outline"></ion-icon>
+          </ion-button>
+          
+          <!-- Botón para eliminar -->
+          <ion-button 
+            (click)="presentDeleteConfirm(item)" 
+            size="small" 
+            color="danger" 
+            fill="outline">
+            <ion-icon name="trash-outline"></ion-icon>
+          </ion-button>
+        </div>
       </ion-card-content>
     </ion-card>
   </div>

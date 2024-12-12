@@ -1,37 +1,54 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Mis Perfumes Favoritos</ion-title>
+    <ion-title>Perfumes Favoritos</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <!-- Si no hay favoritos -->
-  <div *ngIf="favorites.length === 0" class="no-favorites">
-    <ion-text color="medium">
-      <h2>No tienes perfumes favoritos.</h2>
-    </ion-text>
-  </div>
-
-  <!-- Lista de favoritos -->
-  <ion-list *ngIf="favorites.length > 0">
+  <ion-list>
+    <!-- Iterar sobre los perfumes favoritos -->
     <ion-item *ngFor="let item of favorites">
-      <ion-avatar slot="start">
-        <img [src]="item.image" alt="Imagen del perfume">
-      </ion-avatar>
       <ion-label>
-        <h2>{{ item.name }}</h2>
-        <p>{{ item.description }}</p>
+        <h2>{{ item.nombre }}</h2>
+        <p>Mililitros: {{ item.ml }}ml</p>
+        <p>Tipo de esencia: {{ item.tipo }}</p>
+        <p>Descripción: {{ item.descripcion }}</p>
+        <p>Valor: ${{ item.valor }}</p>
+        <!-- Mostrar la foto si existe -->
+        <img *ngIf="item.foto" [src]="item.foto" alt="Foto del perfume" class="perfume-photo" />
       </ion-label>
-      <ion-buttons slot="end">
-        <ion-button (click)="removeFavorite(item)">
-          <ion-icon name="trash" slot="icon-only"></ion-icon>
-        </ion-button>
-      </ion-buttons>
+      <!-- Botón para editar -->
+      <ion-button fill="outline" size="small" color="primary" (click)="editFavorite(item)">
+        <ion-icon name="create-outline"></ion-icon>
+      </ion-button>
+      <!-- Botón para eliminar -->
+      <ion-button fill="outline" size="small" color="danger" (click)="removeFavorite(item)">
+        <ion-icon name="trash-outline"></ion-icon>
+      </ion-button>
+      <!-- Botón para agregar foto -->
+      <ion-button fill="outline" size="small" color="secondary" (click)="addPhoto(item)" *ngIf="!item.foto">
+        <ion-icon name="camera-outline"></ion-icon>
+      </ion-button>
+      <!-- Botón para agregar al carrito -->
+      <ion-button fill="outline" size="small" color="success" (click)="addToCart(item)">
+        <ion-icon name="cart-outline"></ion-icon>
+      </ion-button>
     </ion-item>
   </ion-list>
 
-  <!-- Botón para navegar a la página de inicio -->
-  <ion-footer>
-    <ion-button expand="full" (click)="navigateToHome()">Ir a la Página Principal</ion-button>
-  </ion-footer>
+  <!-- Mostrar mensaje si no hay perfumes favoritos -->
+  <div *ngIf="favorites.length === 0" class="no-favorites">
+    <p>No tienes perfumes marcados como favoritos.</p>
+  </div>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="navigateToHome()">Volver a inicio</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

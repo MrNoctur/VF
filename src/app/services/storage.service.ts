@@ -84,4 +84,19 @@ export class StorageService {
     const favorites = await this.getFavorites();
     return favorites.some(fav => fav.name === item.name);
   }
+
+  // Actualiza un elemento en favoritos
+  async updateFavorite(item: any, updatedData: any) {
+    if (!this.currentUser?.uid) return;
+  
+    const favorites = await this.getFavorites();
+    const index = favorites.findIndex(fav => fav.name === item.name);
+    if (index > -1) {
+      favorites[index] = { ...favorites[index], ...updatedData };
+      const allFavorites = await this._storage?.get(this.FAVORITES_KEY) || {};
+      allFavorites[this.currentUser.email] = favorites;
+      await this._storage?.set(this.FAVORITES_KEY, allFavorites);
+    }
+  }
+  
 }

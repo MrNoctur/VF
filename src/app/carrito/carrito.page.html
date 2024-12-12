@@ -1,20 +1,17 @@
 <ion-header>
   <ion-toolbar>
-    <!-- Botón para Volver -->
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/home"></ion-back-button> <!-- Este botón llevará al usuario a la página de inicio -->
+      <ion-back-button defaultHref="/home"></ion-back-button>
     </ion-buttons>
     <ion-title>Carrito de Compras</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
-  <!-- Mensaje cuando el carrito está vacío -->
   <div *ngIf="carrito.length === 0" class="empty-cart">
     <p>Tu carrito está vacío.</p>
   </div>
 
-  <!-- Productos en el carrito -->
   <div *ngIf="carrito.length > 0" class="cart-items">
     <ion-list>
       <ion-item *ngFor="let producto of carrito">
@@ -24,30 +21,46 @@
         <ion-label>
           <h2>{{ producto.name }}</h2>
           <p>Precio: {{ producto.price | currency }}</p>
-          
-          <!-- Controles de cantidad -->
+          <p>{{ producto.descripcion }}</p> <!-- Descripción del producto -->
+          <p>Stock disponible: {{ producto.stock }}</p> <!-- Stock disponible -->
+
           <div class="quantity-controls">
-            <ion-button (click)="decrementarCantidad(producto)" fill="clear" color="primary">-</ion-button>
+            <ion-button (click)="decrementarCantidad(producto)" fill="clear" color="primary" [disabled]="producto.quantity <= 1" aria-label="Disminuir cantidad">-</ion-button>
             <span>{{ producto.quantity }}</span>
-            <ion-button (click)="incrementarCantidad(producto)" fill="clear" color="primary">+</ion-button>
+            <ion-button (click)="incrementarCantidad(producto)" fill="clear" color="primary" aria-label="Aumentar cantidad">+</ion-button>
           </div>
-          
         </ion-label>
-        <ion-button color="danger" slot="end" (click)="removerProducto(producto.id)">
-          Eliminar
-        </ion-button>
+        <ion-button color="danger" slot="end" (click)="removerProducto(producto.id)" aria-label="Eliminar producto">Eliminar</ion-button>
       </ion-item>
     </ion-list>
 
-    <!-- Total del carrito -->
-    <div class="cart-total">
+    <!-- Resumen de la compra -->
+    <div class="cart-summary">
       <ion-row>
-        <ion-col size="6">Total:</ion-col>
+        <ion-col size="6">Subtotal:</ion-col>
         <ion-col size="6" class="text-right">{{ total | currency }}</ion-col>
+      </ion-row>
+
+      <!-- Costo de envío -->
+      <ion-row>
+        <ion-col size="6">Envío:</ion-col>
+        <ion-col size="6" class="text-right">{{ envio | currency }}</ion-col>
+      </ion-row>
+
+      <!-- Total final -->
+      <ion-row>
+        <ion-col size="6">Total a pagar:</ion-col>
+        <ion-col size="6" class="text-right">{{ (total + envio) | currency }}</ion-col>
       </ion-row>
     </div>
 
+    <!-- Carga mientras se procesa el pago -->
+    <div *ngIf="isLoading" class="loading-spinner">
+      <ion-spinner name="crescent"></ion-spinner> <!-- Spinner de carga -->
+      <p>Procesando tu compra...</p>
+    </div>
+
     <!-- Botón para proceder al pago -->
-    <ion-button expand="full" (click)="procederAlPago()">Proceder al pago</ion-button>
+    <ion-button expand="full" *ngIf="carrito.length > 0 && !isLoading" (click)="procederAlPago()">Proceder al pago</ion-button>
   </div>
 </ion-content>
